@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { userSchema } from '../modules/userModules';
+import { userSchema } from '../models/userModel';
 import moment from 'moment';
 import fs from'fs';
 import jwt from 'jsonwebtoken';

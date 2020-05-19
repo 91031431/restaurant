@@ -1,8 +1,3 @@
-//ADDED router and express;
-const express = require('express');
-
-const User = require('../modules/userModules');
-
 import { 
     addNewUser, 
     getUser, 
@@ -10,8 +5,6 @@ import {
     login,
     auth,
 } from "../controller/userController";
-
-import { Mongoose } from "mongoose";
 
 const route = (app) => {
     app.use('/user', auth)
