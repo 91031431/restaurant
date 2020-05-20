@@ -43,7 +43,11 @@ export const signUpUser = (req, res, next) => {
         const user = new User({
             _id: new mongoose.Types.ObjectId(),
             Email: req.body.Email, 
-            Password: hash
+            Password: hash,
+            Phone: req.body.Phone,
+            Name: req.body.Name,
+            Address: req.body.Address
+
         });
         
         user.save((err, user) => {
