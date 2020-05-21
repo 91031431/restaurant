@@ -4,7 +4,8 @@
   "description": " ",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "test": "jest --watch"
   },
   "keywords": [
     "api"
@@ -17,13 +18,21 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.25.3",
     "mongoose": "^5.9.12",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jest.config.js"
+    ],
+    "testEnvironment": "node"
   }
 }
